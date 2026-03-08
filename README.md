@@ -4,7 +4,7 @@ Implementação de um sistema de carrinho de compras distribuído utilizando pad
 
 ## Arquitetura
 
-![Arquitetura do Sistema](docs/cart-diagram.jpg)
+![Arquitetura do Sistema](cart-diagram.png)
 
 A arquitetura segue um modelo distribuído de microsserviços onde cada componente é responsável por uma funcionalidade específica. O sistema comunica-se através de eventos assíncronos, garantindo baixo acoplamento e alta escalabilidade.
 
