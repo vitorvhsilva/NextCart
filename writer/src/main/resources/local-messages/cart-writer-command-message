@@ -1,0 +1,12 @@
+awslocal sqs send-message --queue-url="http://sqs.us-east-1.localhost.localstack.cloud:4566/000000000000/cart-writer-command-queue" --message-body '{
+  "id":"3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "cartId":"c56a4180-65aa-42ec-a945-5fd21dec0538",
+  "eventType":"POST",
+  "costumerEmail":"cliente@example.com",
+  "currentDate":"2026-03-08T15:00:00Z",
+  "product":{
+    "id":"f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "name":"Produto Exemplo",
+    "current_quantity":2
+  }
+}'
