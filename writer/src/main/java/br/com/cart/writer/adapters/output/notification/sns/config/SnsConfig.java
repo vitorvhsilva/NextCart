@@ -1,4 +1,4 @@
-package br.com.cart.writer.adapters.input.messaging.sqs.config;
+package br.com.cart.writer.adapters.output.notification.sns.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -6,15 +6,15 @@ import org.springframework.context.annotation.Configuration;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
-import software.amazon.awssdk.services.sqs.SqsAsyncClient;
-import software.amazon.awssdk.services.sqs.SqsAsyncClientBuilder;
+import software.amazon.awssdk.services.sns.SnsClient;
+import software.amazon.awssdk.services.sns.SnsClientBuilder;
 import software.amazon.awssdk.services.sqs.SqsClient;
 import software.amazon.awssdk.services.sqs.SqsClientBuilder;
 
 import java.net.URI;
 
 @Configuration
-public class SqsConfig {
+public class SnsConfig {
 
     @Value("${aws.endpoint:http://localhost:4566}")
     private String sqsEndpoint;
@@ -29,21 +29,8 @@ public class SqsConfig {
     private String secretKey;
 
     @Bean
-    public SqsClient sqsClient() {
-        SqsClientBuilder builder = SqsClient.builder()
-                .region(Region.of(awsRegion))
-                .credentialsProvider(StaticCredentialsProvider.create(
-                        AwsBasicCredentials.create(accessKey, secretKey)
-                ));
-
-        builder.endpointOverride(URI.create(sqsEndpoint));
-
-        return builder.build();
-    }
-
-    @Bean
-    public SqsAsyncClient sqsAsyncClient() {
-        SqsAsyncClientBuilder builder = SqsAsyncClient.builder()
+    public SnsClient snsClient() {
+        SnsClientBuilder builder = SnsClient.builder()
                 .region(Region.of(awsRegion))
                 .credentialsProvider(StaticCredentialsProvider.create(
                         AwsBasicCredentials.create(accessKey, secretKey)

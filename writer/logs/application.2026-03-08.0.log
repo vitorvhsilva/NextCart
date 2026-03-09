@@ -1,0 +1,14 @@
+2026-03-08 23:55:55.587 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-08 23:55:55.624 [restartedMain] INFO  b.com.cart.writer.WriterApplication - Starting WriterApplication using Java 24.0.1 with PID 30284 (D:\Spring\NextCart\writer\build\classes\java\main started by vitor in D:\Spring\NextCart\writer)
+2026-03-08 23:55:55.626 [restartedMain] INFO  b.com.cart.writer.WriterApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-08 23:55:55.686 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-08 23:55:55.686 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-08 23:55:56.864 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-08 23:55:56.881 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-08 23:55:56.883 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-08 23:55:56.883 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-03-08 23:55:56.936 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1249 ms
+2026-03-08 23:55:58.321 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-08 23:55:58.337 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-08 23:55:59.667 [lifecycle-thread-1] INFO  i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2026-03-08 23:55:59.675 [restartedMain] INFO  b.com.cart.writer.WriterApplication - Started WriterApplication in 4.687 seconds (process running for 5.326)

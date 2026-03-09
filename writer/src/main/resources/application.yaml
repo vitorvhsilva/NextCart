@@ -1,19 +1,32 @@
 spring:
   application:
     name: writer
+  cloud:
+    aws:
+      dynamodb:
+        endpoint: http://localhost:4566
+        region: us-east-1
+        access-key: test
+        secret-key: test
 
 sqs:
   cart-writer-command-queue:
     name: cart-writer-command-queue
 
+sns:
+  cart-writer-cqrs-topic:
+    arn: arn:aws:sns:us-east-1:000000000000:cart-writer-cqrs-topic
+
 aws:
   region: us-east-1
-  sqs:
-    endpoint: http://localhost:4566
+  endpoint: http://localhost:4566
   access-key: test
   secret-key: test
 
-spring.cloud.aws:
-  sqs:
-    endpoint: http://localhost:4566
-    region: us-east-1
+logging:
+  level:
+    root: INFO
+    br.com.cart.writer: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
